@@ -63,9 +63,9 @@ public class KSPictureInPictureController: AVPictureInPictureController {
         guard KSOptions.isPipPopViewController else {
             #if canImport(UIKit)
             // 直接退到后台
-            runOnMainThread {
-                UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
-            }
+            // runOnMainThread {
+            //     UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            // }
             #endif
             return
         }
